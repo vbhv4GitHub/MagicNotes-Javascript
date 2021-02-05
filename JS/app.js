@@ -1,5 +1,15 @@
 console.log("Welcome to this notes app.");
 
+/*
+
+=> Features that can be added
+#1. Title of the note
+#2. A username attached with every note.
+#3. Highligh important notes in specific color features.
+#4. Sync and host to a webserver.
+
+*/
+
 // => Function to display all the notes.
 function showNotes() {
 
