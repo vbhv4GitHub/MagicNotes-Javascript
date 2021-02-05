@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App - JavaScript</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Magic Notes</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input id="searchTxt" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-3">
+        <!-- Heading -->
+        <h2>Welcome to Magic Notes</h2>
+
+        <!-- => The card to enable the feature of adding notes -->
+        
+        <div class="card">
+            <!-- <img src="..." class="card-img-top" alt="..."> -->
+            <div class="card-body">
+                <h5 class="card-title">Write a note</h5>
+                <div class="form-floating">
+                    <textarea class="form-control" placeholder="write your note here" id="addTxt"
+                        style="height: 100px"></textarea>
+                    <label for="addTxt">Write your note here</label>
+                </div>
+                <button id= "addBtn" href="#" class="btn btn-small btn-primary my-3">Add Note</button>
+            </div>
+        </div>
+
+        <!-- => The notes in our database will be listed here. -->
+        
+        <h2 class="my-5"> Your Notes</h2>
+
+        <!-- => Container to contain all the notes in the form of a grid-->
+        
+        <div id="notes" class="container-fluid row">
+            <!-- <div class="my-2 mx-2 card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Note's Title</h5>
+                  <p class="card-text">Note's content</p>
+                  <button href="#" class="btn btn-small btn-primary">Delete</button>
+                </div>
+              </div> -->
+        </div>
+
+    </div>
+
+</body>
+<script src="/JS/app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"></script>
+
+</html>
