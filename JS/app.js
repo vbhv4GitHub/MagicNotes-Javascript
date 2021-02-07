@@ -100,7 +100,11 @@ searchTxt.addEventListener('input', function () {
     Array.from(noteCards).forEach(function (element) {
 
         let cardTxt = element.getElementsByTagName("p")[0].innerText;
+        let cardTitle = element.getElementsByTagName("h5")[0].innerText;
         if (cardTxt.includes(inputVal)) {
+            element.style.display = "block";
+        }
+        else if (cardTitle.includes(inputVal)){
             element.style.display = "block";
         }
         else {
