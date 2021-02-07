@@ -28,8 +28,8 @@ function showNotes() {
         html += `
             <div class="my-2 mx-2 card noteCards" style="width: 18rem;">
                 <div class="card-body">
-                  <h5 class="card-title">Note ${index + 1}</h5>
-                  <p class="card-text"> ${element} </p>
+                  <h5 class="card-title"> ${element.title}</h5>
+                  <p class="card-text"> ${element.text} </p>
                   <button id="${index}" onclick="deleteNote(this.id)" class="btn btn-small btn-primary">Delete</button>
                 </div>
               </div>`;
@@ -67,6 +67,7 @@ let addBtn = document.getElementById('addBtn');
 addBtn.addEventListener('click', function (e) {
 
     let addTxt = document.getElementById('addTxt');
+    let addTitle = document.getElementById('addTitle');
     let notes = localStorage.getItem("notes");
     if (notes == null) {
         notesObject = [];
@@ -74,9 +75,16 @@ addBtn.addEventListener('click', function (e) {
     else {
         notesObject = JSON.parse(notes);
     }
-    notesObject.push(addTxt.value);
+
+    let myObj = {
+        title: addTitle.value,
+        text: addTxt.value
+    }
+
+    notesObject.push(myObj);
     localStorage.setItem("notes", JSON.stringify(notesObject));
     addTxt.value = "";
+    addTitle.value = "";
     console.log(notesObject);
     showNotes(); // => Will Refresh the note list section of the page if you add a note.
 });
